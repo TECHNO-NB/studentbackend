@@ -12,7 +12,7 @@ const app = express();
 // 🌐 Middleware
 // ----------------------
 app.use(cors({
-  origin: ["https://scholarship.worldhinduvision.org/","http://localhost:3000","https://scholarship.worldhinduvision.org"], // frontend URL
+  origin: ["https://scholarship.worldhinduvision.org/","http://localhost:3000","https://scholarship.worldhinduvision.org","https://studentschoolership.vercel.app/","https://studentschoolership.vercel.app"], // frontend URL
   credentials: true, // allow cookies
 }));
 
