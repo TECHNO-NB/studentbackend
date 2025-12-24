@@ -12,7 +12,7 @@ const app = express();
 // 🌐 Middleware
 // ----------------------
 app.use(cors({
-  origin: ["https://youth-earning-app.vercel.app","http://localhost:3000","https://youth-earning-app.vercel.app","https://youth-earning-app.vercel.app"], // frontend URL
+  origin: ["https://scholarship.worldhinduvision.org/","http://localhost:3000","https://scholarship.worldhinduvision.org"], // frontend URL
   credentials: true, // allow cookies
 }));
 
