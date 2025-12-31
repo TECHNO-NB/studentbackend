@@ -72,7 +72,9 @@ app.post('/api/register', async (req, res) => {
 // GET: Retrieve all applications (Optional - for admin panel)
 app.get('/api/applications', async (req, res) => {
   try {
+
     const applications = await Application.find().sort({ createdAt: -1 });
+    console.log(applications)
     res.json(applications);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch applications' });

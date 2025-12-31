@@ -12,13 +12,13 @@ const app = express();
 // 🌐 Middleware
 // ----------------------
 app.use(cors({
-  origin: ["https://scholarship.worldhinduvision.org/","http://localhost:3000","https://scholarship.worldhinduvision.org","https://studentschoolership.vercel.app/","https://studentschoolership.vercel.app"], // frontend URL
+  origin: ["https://scholarship.worldhinduvision.org/","http://localhost:3000","https://scholarship.worldhinduvision.org","https://studentschoolership.vercel.app/","https://studentschoolership.vercel.app","http://localhost:3001"], // frontend URL
   credentials: true, // allow cookies
 }));
 
 app.use(cookieParser());
-app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ limit: "50mb", extended: true }));
+app.use(express.json({ limit: "5mb" }));
+app.use(express.urlencoded({ limit: "5mb", extended: true }));
 
 // Logging (dev only)
 if (process.env.NODE_ENV === "development") {
