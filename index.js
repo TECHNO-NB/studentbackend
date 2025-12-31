@@ -73,7 +73,7 @@ app.post('/api/register', async (req, res) => {
 app.get('/api/applications', async (req, res) => {
   try {
 
-    const applications = await Application.find().sort({ createdAt: -1 });
+    const applications = await Application.find().sort({ createdAt: -1 }).limit(5);
     console.log(applications)
     res.json(applications);
   } catch (error) {

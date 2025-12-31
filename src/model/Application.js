@@ -30,8 +30,8 @@ const ApplicationSchema = new mongoose.Schema({
 
   // 5. Declaration
   agree: { type: Boolean, required: true },
-  studentSign: { type: String, required: true },
-  parentSign: { type: String, required: true },
+  studentSign: { type: String },
+  parentSign: { type: String },
 
   studentDate: { type: String },
   parentDate: { type: String },
