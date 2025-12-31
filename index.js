@@ -78,6 +78,27 @@ app.get("/api/applications", async (req, res) => {
   }
 });
 
+// GET: Retrieve all applications (Optional - for admin panel)
+app.delete("/api/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedApplication = await Application.findByIdAndDelete(id);
+
+    if (!deletedApplication) {
+      return res.status(404).json({ error: "Application not found" });
+    }
+
+    res.json({
+      message: "Application deleted successfully",
+      deletedApplication,
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to delete application" });
+  }
+});
+
+
 // POST: Submit Volunteer Application
 app.post("/api/volunteer-register", async (req, res) => {
   try {
