@@ -60,7 +60,7 @@ const VolunteerSchema = new mongoose.Schema(
     },
     applicantSign: {
       type: String, 
-      required: true,
+   
       // Note: This stores the Base64 image string. 
       // For production, it is better to upload to S3/Cloudinary and store the URL here.
     },
